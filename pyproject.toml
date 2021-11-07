@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fastapi-celery-project"
+version = "0.1.0"
+description = ""
+authors = ["victor <victorblog410@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "0.66.0"
+asgiref = "^3.4.1"
+uvicorn = "^0.15.0"
+celery = "^5.1.2"
+redis = "^3.5.3"
+flower = "^1.0.0"
+alembic = "^1.7.4"
+SQLAlchemy = "^1.4.26"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
