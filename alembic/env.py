@@ -28,7 +28,7 @@ fastapi_app = create_app()  # new
 target_metadata = Base.metadata  # para que novos modelos sejam descobertos pela Alembic.
 
 
-# other values from the config, defined by the needs of env.py,
+# other values from the config, defined by the needs of .env.py,
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.

@@ -28,7 +28,7 @@ class TestingConfig(BaseConfig):
 @lru_cache()
 def get_settings():
     """
-    Em get_settings, usamos a FASTAPI_CONFIGvariável env para controlar qual configuração usar. Por exemplo,
+    Em get_settings, usamos a FASTAPI_CONFIGvariável .env para controlar qual configuração usar. Por exemplo,
     durante o desenvolvimento, DevelopmentConfigserá usado e TestingConfigserá usado durante o teste. :return:
     """
     config_cls_dict = {
