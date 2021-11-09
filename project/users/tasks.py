@@ -1,5 +1,6 @@
 from celery import shared_task
 import time
+from celery.contrib import rdb
 
 """Muitos recursos na web recomendam o uso celery.task. Isso pode causar importações circulares, pois você terá que 
 importar a instância do Celery.
@@ -13,5 +14,6 @@ para qualquer lugar do aplicativo e ele funcionará conforme o esperado.
 
 @shared_task
 def divide(x, y):
-    time.sleep(5)
+    #    rdb.set_trace() debug
+    time.sleep(4)
     return x / y
