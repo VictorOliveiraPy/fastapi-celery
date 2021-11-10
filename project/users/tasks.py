@@ -1,6 +1,9 @@
-from celery import shared_task
 import time
-from celery.contrib import rdb
+
+from celery import shared_task
+# from celery.contrib import rdb
+
+from project.users.views import api_call
 
 """Muitos recursos na web recomendam o uso celery.task. Isso pode causar importações circulares, pois você terá que 
 importar a instância do Celery.
@@ -17,3 +20,8 @@ def divide(x, y):
     #    rdb.set_trace() debug
     time.sleep(4)
     return x / y
+
+
+@shared_task()
+def sample_task(email):
+    api_call(email)

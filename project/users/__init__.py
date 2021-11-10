@@ -1,5 +1,6 @@
 from fastapi import APIRouter
-from . import models, tasks # noqa
+
+from . import views, models, tasks  # noqa
 
 users_router = APIRouter(
     prefix="/users",
